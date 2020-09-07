@@ -1,0 +1,90 @@
+
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  nav {
+    background: #ffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  nav {
+    
+    p {
+      font-family: 'Quicksand', sans-serif;
+    }
+  }
+
+  .resource {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20%;
+
+
+
+    .wallet, .loan, .pool {
+      border-radius: 10px;
+      width: 80%;
+      margin: 10px;
+      color: black;
+      font-size: 1rem;
+      box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 6px -6px black;
+  
+      
+  
+      img {
+        height: 5rem;
+      }
+      
+      p {
+        background: #ffff;
+        box-shadow: 0 8px 6px -6px black;
+        height: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 0;
+        font-family: 'Quicksand', sans-serif;
+      }
+    }
+    .wallet {
+      background: #A1616A;
+      
+      img {
+        background: #A1616A;
+      }
+    }
+  
+    .loan {
+      background: #8DD070;
+    }
+  
+    .pool {
+      background: #575988;
+    }
+
+  }
+
+
+  .image {
+    position: fixed;
+    // top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.44;
+  }
+}
