@@ -17,7 +17,7 @@ class SignUp extends React.Component {
             <input type="password" name="password" placeholder="Password" />
             <input type="password" name="confirmPassword" placeholder="Confirm Password" />
             <Link to='/dashboard'>
-              <button type="submit">Login</button>
+              <button type="submit">Create account</button>
             </Link>
           </form>
           <Link to='/signin'>
