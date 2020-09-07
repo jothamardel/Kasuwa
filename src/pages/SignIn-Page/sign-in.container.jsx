@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import { Link } from 'react-router-dom';
 import './sign-in.styles.scss';
 
 
@@ -15,12 +14,16 @@ class SigIn extends React.Component {
             <input type="password" name="password" id="" />
             <button type="submit">Login</button>
           </form>
-          <p>Don't have an account? Sign Up.</p>
+          <Link to='/signup'>
+            <p>Don't have an account? Sign Up.</p>
+          </Link>
           <hr></hr>
           <p>or</p>
           <div className="oauth">
-            <button><i class="fab fa-facebook-square"></i>Login with Facebook</button>
-            <button><i class="fab fa-google"></i>Login with Google</button>
+            <Link to='/dashboard'>
+              <button><i className="fab fa-facebook-square"></i>Login with Facebook</button>
+              <button><i className="fab fa-google"></i>Login with Google</button>
+            </Link>
           </div>
         </div>
         <img src={require("../../assets/market_woman1.jpg")} alt="Market woman" />
