@@ -22,8 +22,8 @@ class SignUp extends React.Component {
           <hr></hr>
           <p>or</p>
           <div className="oauth">
-            <button><i class="fab fa-facebook-square"></i>Login with Google</button>
-            <button><i class="fab fa-google"></i>Login with Facebook</button>
+            <button><i class="fab fa-facebook-square"></i>Login with Facebook</button>
+            <button><i class="fab fa-google"></i>Login with Google</button>
           </div>
         </div>
         <img src={require("../../assets/market_woman1.jpg")} alt="Market woman" />

@@ -1,4 +1,7 @@
-
+$gray: #9b9b9b;
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
@@ -33,7 +36,7 @@
       width: 80%;
       margin-top: 30%;
       padding: 20px;
-      height: 32rem;
+      height: 35rem;
       border-radius: 10px;
 
       form {
@@ -48,6 +51,10 @@
           border: 0.7px solid #7f7f7f;
           height: 2rem;
           width: 78%;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1rem;
+          background: transparent;
+          border-bottom: 2px solid $gray;
         }
 
         button {
@@ -55,6 +62,7 @@
           height: 2rem;
           border: 0.7px solid #7f7f7f;
           font-family: 'Quicksand', sans-serif;
+          font-size: 1rem;
         }
       }
 
@@ -66,7 +74,7 @@
 
       p {
         margin: 0;
-        font-size: 0.7rem;
+        font-size: 1rem;
       }
 
       div {
@@ -76,10 +84,11 @@
         width: 80%;
 
         button {
-          width: 84%;
+          width: 80%;
           height: 2rem;
           margin: 5px;
           font-family: 'Quicksand', sans-serif;
+          font-size: 1rem;
 
           i {
             margin-right: 10px;
@@ -91,7 +100,6 @@
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-
   .sign-up {
 
     display: flex;
@@ -134,15 +142,40 @@
 
         input {
           margin: 5px;
-          border: 0.7px solid #7f7f7f;
+          border: 0.4px solid black;
           height: 2rem;
           width: 78%;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 0.8rem;
+          background: transparent;
+          border-bottom: 2px solid $gray;
+          //
+          // width: 78%;
+          // border: 0;
+          // border-bottom: 2px solid $gray;
+          // outline: 0;
+          // font-size: 1.3rem;
+          // color: $white;
+          // padding: 7px 0;
+          // background: transparent;
+          // transition: border-color 0.2s;
+
+          // &::placeholder {
+          //   color: transparent;
+          // }
+
+          // &:placeholder-shown ~ .form__label {
+          //   font-size: 1.3rem;
+          //   cursor: text;
+          //   top: 20px;
+          // }
         }
 
         button {
           width: 80%;
           height: 2rem;
-          border: 0.7px solid #7f7f7f;
+          border: 0.4px solid black;
+          background: transparent;
           font-family: 'Quicksand', sans-serif;
         }
       }
@@ -168,10 +201,18 @@
           width: 84%;
           height: 2rem;
           margin: 5px;
+          background: transparent;
+          border: 0.4px solid black;
           font-family: 'Quicksand', sans-serif;
 
-          i {
+          .fa-facebook-square {
             margin-right: 10px;
+            color: blue;
+          }
+
+          .fa-google {
+            margin-right: 10px;
+            // color: lightskyblue;
           }
         }
       }
@@ -226,6 +267,10 @@
           margin: 5px;
           border: 0.7px solid #7f7f7f;
           height: 2rem;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 0.8rem;
+          background: transparent;
+          border-bottom: 2px solid $gray;
         }
 
         button {
@@ -316,6 +361,11 @@
           margin: 5px;
           border: 0.7px solid #7f7f7f;
           height: 2rem;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 0.8rem;
+          background: transparent;
+          border-bottom: 0.7px solid $gray;
+          width: 100%;
         }
 
         button {
