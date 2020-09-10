@@ -26,7 +26,7 @@ class Dashboard extends React.Component {
           </div>
           <div className="pool">
             <img src={require("../../assets/credit_card.svg")} alt="A credit card" />
-            <p>Cont. pool:</p><strong>NGN 1,000, 000.00</strong>
+            <p>Contribution pool:</p><strong>NGN 1,000, 000.00</strong>
           </div>
         </div>
         <img src={require("../../assets/kasuwa1.png")} alt="Naira notes with smartphone" className="image" />
