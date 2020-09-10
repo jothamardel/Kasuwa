@@ -13,6 +13,16 @@
   }
 }
 
+.fa-facebook-square {
+  margin-right: 10px;
+  color: blue;
+}
+
+.fa-google {
+  margin-right: 10px;
+  color: red;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
