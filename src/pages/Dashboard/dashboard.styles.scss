@@ -33,7 +33,7 @@
 
     .wallet, .loan, .pool {
       border-radius: 10px;
-      width: 80%;
+      width: 50%;
       margin: 10px;
       color: black;
       font-size: 1rem;
@@ -45,6 +45,7 @@
       0 41.8px 33.4px rgba(0, 0, 0, 0.086),
       0 100px 80px rgba(0, 0, 0, 0.12);
       box-shadow: 0 8px 6px -6px black;
+      cursor: pointer;
   
       
   
@@ -58,7 +59,15 @@
         height: 2rem;
         padding-top: 1rem;
         padding-bottom: 0;
+        margin-bottom: 0;
         font-family: 'Quicksand', sans-serif;
+      }
+      
+      strong {
+        background: #ffff;
+        box-shadow: 0 8px 6px -6px black;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 500;
       }
     }
     .wallet {
@@ -94,13 +103,14 @@
 
 .dashboard-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  // flex-direction: column;
+  // align-items: center;
   justify-content: center;
   // background: url('../../assets/kasuwa1.png') no-repeat center;
 
   nav {
-    background: #ffff;
+    background: #575988;
+    color: #ffff;
     position: fixed;
     top: 0;
     left: 0;
@@ -116,17 +126,16 @@
 
   .resource {
     display: flex;
-    // flex-wrap: wrap;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin-top: 20%;
+    margin-top: 10%;
 
 
 
     .wallet, .loan, .pool {
       border-radius: 10px;
-      width: 50%;
+      width: 25%;
       margin: 10px;
       color: black;
       font-size: 1rem;
@@ -144,13 +153,21 @@
       img {
         height: 5rem;
       }
-      
-      p {
+
+       p {
         background: #ffff;
         box-shadow: 0 8px 6px -6px black;
         height: 2rem;
         padding-top: 1rem;
         padding-bottom: 0;
+        margin-bottom: 0;
+        font-family: 'Quicksand', sans-serif;
+      }
+      
+      span {
+        background: #ffff;
+        box-shadow: 0 8px 6px -6px black;
+        // height: 2rem;
         font-family: 'Quicksand', sans-serif;
       }
     }

@@ -10,21 +10,23 @@ class Dashboard extends React.Component {
       <div className="dashboard-container">
         <nav>
           <div></div>
-            <p>Welcome, Bashir Sheidu</p>
+          <p>Welcome, Bashir Sheidu</p>
         </nav>
         <div className="resource">
-          <button>Fund Wallet</button>
+          {/* <div>
+            <button>Fund Wallet</button>
+          </div> */}
           <div className="wallet">
             <img src={require("../../assets/wallet.svg")} alt="A wallet" />
-            <p>Wallet: NGN 1,000.00</p>
+            <p>Wallet: </p><strong>NGN 1,000.00</strong>
           </div>
           <div className="loan">
             <img src={require("../../assets/vault.svg")} alt="A vault" />
-            <p>Accessible loan: NGN 5,000.00</p>
+            <p>Accessible loan: </p><strong>NGN 5,000.00</strong>
           </div>
           <div className="pool">
             <img src={require("../../assets/credit_card.svg")} alt="A credit card" />
-            <p>Contribution pool: NGN 1,000, 000.00</p>
+            <p>Cont. pool:</p><strong>NGN 1,000, 000.00</strong>
           </div>
         </div>
         <img src={require("../../assets/kasuwa1.png")} alt="Naira notes with smartphone" className="image" />
