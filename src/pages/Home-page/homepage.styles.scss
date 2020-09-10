@@ -7,13 +7,51 @@
   .home-page-container {
 
     .description {
+      width: 63%;
+      padding: 0;
+      background: url('../../assets/background.svg');
+
       h1 {
+        margin-top: 25%;
+        margin-bottom: 0;
+        font-size: 5rem;
+        color: #104B32;
+        // color: #fff;
+      }
+      p {
+          margin: 0;
+          font-family: 'Quicksand', sans-serif;
+          margin-bottom: 10px;
+          font-size: 1.5rem;
+          // color: #fff;
+
+        }
+      
+      button {
+        margin-bottom: 10px;
+        background: #104B32;
+        color: #ffff;
+        border: 0.8px solid #ffff;
+        height: 3rem;
+        width: 10rem;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background: #FFFF;
+        border: 0.8px solid #104B32;
+          color: #104B32;
+        }
       }
     }
 
   .home-page-img {
    position: fixed;
    left: 62%;
+   top: 0;
+   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
   }
 }
 }
