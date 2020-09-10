@@ -5,6 +5,8 @@
   .sign-in {
     // background: url('../../assets/market_woman.jpg') no-repeat;
     width: 100%;
+    display: flex;
+    justify-content: center;
 
     .sign-in-container {
       background: white;
@@ -14,13 +16,19 @@
       padding: 20px;
       height: 24rem;
       border-radius: 10px;
+      margin-top: 5%;
       background: url('../../assets/background.svg') no-repeat center;
+      width: 40%;
+      // background-color: rgb(68,68,68); /* Needed for IEs */
+      -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+      -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+      box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
 
       form {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 30%;
+        width: 50%;
         margin-bottom: 10px;
 
         input {

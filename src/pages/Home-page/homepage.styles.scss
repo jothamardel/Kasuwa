@@ -49,7 +49,8 @@
   .home-page-img {
    position: fixed;
    left: 62%;
-   top: 0;
+   height: 100vh;
+   top: -4px;
    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
   }
