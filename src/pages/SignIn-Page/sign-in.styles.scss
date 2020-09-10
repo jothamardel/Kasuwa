@@ -3,7 +3,7 @@
 @media only screen and (min-width: 1224px) {
   /* Styles */
   .sign-in {
-    background: url('../../assets/market_woman.jpg') no-repeat;
+    // background: url('../../assets/market_woman.jpg') no-repeat;
     width: 100%;
 
     .sign-in-container {
@@ -14,6 +14,7 @@
       padding: 20px;
       height: 24rem;
       border-radius: 10px;
+      background: url('../../assets/background.svg') no-repeat center;
 
       form {
         display: flex;
@@ -34,9 +35,52 @@
           height: 2rem;
           border: 0.7px solid #7f7f7f;
           font-family: 'Quicksand', sans-serif;
+          cursor: pointer;
+
+          &:hover {
+            background: #104B32;
+            color: #fff;
+          }
         }
     }
+
+    hr {
+      border: 0.7px solid #7f7f7f;
+      // width: 64%;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      button {
+        width: 80%;
+        height: 2rem;
+        margin: 5px;
+        font-family: 'Quicksand', sans-serif;
+        cursor: pointer;
+
+         &:hover {
+            background: #104B32;
+            color: #fff;
+            border: 0.7px solid #104B32;
+          }
+
+        i {
+          margin-right: 20px;
+        }
+      }
+    }
   }
+
 
     img {
       display: none;

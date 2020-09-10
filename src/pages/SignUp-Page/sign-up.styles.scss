@@ -5,6 +5,115 @@ $white: #fff;
 
 @media only screen and (min-width: 1224px) {
   /* Styles */
+    
+  .sign-up {
+
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+
+    h1 {
+      font-family: 'Quicksand', sans-serif;
+      color: #7f7f7f;
+    }
+
+    img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: 100vh;
+      z-index: -1;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      display: none;
+    }
+    .sign-up-container {
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      // margin-top: 30%;
+      padding: 20px;
+      height: 35rem;
+      border-radius: 10px;
+      background: url('../../assets/background.svg') no-repeat center;
+
+      form {
+        // display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 10px;
+
+        input {
+          margin: 5px;
+          border: 0.7px solid #7f7f7f;
+          height: 2rem;
+          width: 78%;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1rem;
+          background: transparent;
+          border-bottom: 2px solid $gray;
+        }
+
+        button {
+          width: 79%;
+          height: 2rem;
+          border: 0.7px solid #7f7f7f;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1rem;
+          cursor: pointer;
+
+           &:hover {
+            background: #104B32;
+            color: #fff;
+            border: 0.7px solid #104B32;
+          }
+        }
+      }
+
+      hr {
+        border: 0.7px solid #7f7f7f;
+        // width: 64%;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+
+        button {
+          width: 80%;
+          height: 2rem;
+          margin: 5px;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 1rem;
+          cursor: pointer;
+
+          &:hover {
+            background: #104B32;
+            color: #fff;
+            border: 0.7px solid #104B32;
+          }
+
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
   
 }
 
