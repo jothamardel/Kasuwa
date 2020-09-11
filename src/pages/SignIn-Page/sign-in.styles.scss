@@ -361,9 +361,11 @@
         width: 80%;
 
         button {
-          width: 84%;
+           width: 84%;
           height: 2rem;
           margin: 5px;
+          background: transparent;
+          border: 0.4px solid #104B32;
           font-family: 'Quicksand', sans-serif;
 
           i {
