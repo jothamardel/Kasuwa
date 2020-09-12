@@ -3,266 +3,256 @@ $primary: #11998e;
 $secondary: #38ef7d;
 $white: #fff;
 
-@media only screen and (min-width: 1224px) {
-  /* Styles */
-    
-  .sign-up {
 
-    display: flex;
-    justify-content: center;
-    height: 100%;
+.sign-up {
+
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  width: 100%;
+  margin-top: 5rem;
+
+  h1 {
     font-family: 'Quicksand', sans-serif;
-    width: 100%;
+    color: #7f7f7f;
+  }
 
-    h1 {
-      font-family: 'Quicksand', sans-serif;
-      color: #7f7f7f;
-    }
+  img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: -1;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    display: none;
+  }
+  .sign-up-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 20px;
+    height: 52%;
+    margin-top: 2%;
+    border-radius: 10px;
+    background: url('../../assets/background.svg') no-repeat center;
+    -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
 
-    img {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      height: 100vh;
-      z-index: -1;
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%);
-      display: none;
-    }
-    .sign-up-container {
-      background: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 50%;
-      // margin-top: 30%;
-      padding: 20px;
-      height: 87vh;
-      margin-top: 2%;
-      border-radius: 10px;
-      background: url('../../assets/background.svg') no-repeat center;
-      -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-      -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-      box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    form {
+      width: 80%;
+      margin-bottom: 10px;
 
-      form {
-        // display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        margin-bottom: 10px;
-
-        input {
-          margin: 5px;
-          border: 0.7px solid #7f7f7f;
-          height: 2rem;
-          width: 78%;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 1rem;
-          background: transparent;
-          border-bottom: 2px solid $gray;
-        }
-
-        button {
-          width: 79%;
-          height: 2rem;
-          border: 0.7px solid #7f7f7f;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 1rem;
-          cursor: pointer;
-
-           &:hover {
-            background: #104B32;
-            color: #fff;
-            border: 0.7px solid #104B32;
-          }
-        }
-      }
-
-      hr {
+      input {
+        margin: 5px;
         border: 0.7px solid #7f7f7f;
-        // width: 64%;
-        margin: 0;
-      }
-
-      p {
-        margin: 0;
+        height: 2rem;
+        width: 78%;
+        font-family: 'Quicksand', sans-serif;
         font-size: 1rem;
+        background: transparent;
+        border-bottom: 2px solid $gray;
       }
 
-      div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-
-        button {
-          width: 80%;
-          height: 2rem;
-          margin: 5px;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 1rem;
-          cursor: pointer;
+      button {
+        width: 79%;
+        height: 2rem;
+        border: 0.7px solid #7f7f7f;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
 
           &:hover {
-            background: #104B32;
-            color: #fff;
-            border: 0.7px solid #104B32;
-          }
-
-          i {
-            margin-right: 10px;
-          }
+          background: #fff;
+          color: #7f7f7f;
+          border: 0.7px solid #104B32;
         }
       }
     }
-  }
-  
-}
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
-    
-  .sign-up {
-
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    font-family: 'Quicksand', sans-serif;
-
-    h1 {
-      font-family: 'Quicksand', sans-serif;
-      color: #7f7f7f;
+    hr {
+      display: none;
     }
 
-    img {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      height: 100vh;
-      z-index: -1;
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%);
+    p {
+      margin: 0;
+      font-size: 1rem;
     }
-    .sign-up-container {
-      background: white;
+
+    div {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 80%;
-      margin-top: 30%;
-      padding: 20px;
-      height: 35rem;
-      border-radius: 10px;
 
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      button {
         width: 80%;
-        margin-bottom: 10px;
-
-        input {
-          margin: 5px;
-          border: 0.7px solid #7f7f7f;
-          height: 2rem;
-          width: 78%;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 1rem;
-          background: transparent;
-          border-bottom: 2px solid $gray;
-        }
-
-        button {
-          width: 100%;
-          height: 2rem;
-          border: 0.7px solid #7f7f7f;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 1rem;
-        }
-      }
-
-      hr {
-        border: 0.7px solid #7f7f7f;
-        width: 64%;
-        margin: 0;
-      }
-
-      p {
-        margin: 0;
+        height: 2rem;
+        margin: 5px;
+        font-family: 'Quicksand', sans-serif;
         font-size: 1rem;
-      }
+        cursor: pointer;
 
-      div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
+        &:hover {
+          background: #fff;
+          color: #7f7f7f;
+          border: 0.7px solid #104B32;
+        }
 
-        button {
-          width: 80%;
-          height: 2rem;
-          margin: 5px;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 1rem;
-
-          i {
-            margin-right: 10px;
-          }
+        i {
+          margin-right: 10px;
         }
       }
     }
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+@media only screen and (max-width: 1024px) {
   .sign-up {
 
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  width: 100vw;
+  margin: 0;
+  background:
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #fff;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+
+
+  h1 {
+    font-family: 'Quicksand', sans-serif;
+    color: #7f7f7f;
+    margin-top: 2rem;
+  }
+
+
+  .sign-up-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    padding: 20px;
+    height: 52%;
+    margin-top: 10rem;
+    border-radius: 10px;
+    
+    form {
+      width: 80%;
+      margin-bottom: 10px;
+
+      input {
+        margin: 5px;
+        border: 0.7px solid #7f7f7f;
+        height: 2rem;
+        width: 78%;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1rem;
+        background: transparent;
+        border-bottom: 2px solid $gray;
+      }
+
+      button {
+        width: 79%;
+        height: 2rem;
+        border: 0.7px solid #7f7f7f;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+
+          &:hover {
+          background: #fff;
+          color: #7f7f7f;
+          border: 0.7px solid #104B32;
+        }
+      }
+    }
+
+    hr {
+      display: none;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+
+      button {
+        width: 80%;
+        height: 2rem;
+        margin: 5px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background: #fff;
+          color: #7f7f7f;
+          border: 0.7px solid #104B32;
+        }
+
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+}
+
+@media only screen and (max-device-width: 767px) {
+   .sign-up {
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     font-family: 'Quicksand', sans-serif;
 
     h1 {
       font-family: 'Quicksand', sans-serif;
       color: #7f7f7f;
+      font-size: 1.5rem;
     }
 
-    img {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      height: 100vh;
-      z-index: -1;
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%);
-    }
     .sign-up-container {
       background: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 80%;
-      margin-top: 20%;
+      margin-top: 5rem;
       padding: 20px;
       height: 32rem;
       border-radius: 10px;
       margin-bottom: 20px;
 
       form {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
         width: 100%;
         margin-bottom: 10px;
 
         input {
           margin: 5px;
           border: 0.4px solid black;
-          height: 2rem;
+          height: 1.4rem;
           width: 78%;
           font-family: 'Quicksand', sans-serif;
           font-size: 0.8rem;
@@ -271,12 +261,6 @@ $white: #fff;
         }
 
         button {
-          // width: 80%;
-          // height: 2rem;
-          // border: 0.4px solid black;
-          // background: transparent;
-          // font-family: 'Quicksand', sans-serif;
-
           width: 80%;
           height: 2rem;
           border: 0.7px solid #7f7f7f;
@@ -285,9 +269,7 @@ $white: #fff;
       }
 
       hr {
-        border: 0.7px solid #7f7f7f;
-        width: 64%;
-        margin: 0;
+        display: none;
       }
 
       p {
@@ -302,7 +284,7 @@ $white: #fff;
         width: 80%;
 
         button {
-          width: 84%;
+          width: 100%;
           height: 2rem;
           margin: 5px;
           background: transparent;
@@ -322,192 +304,5 @@ $white: #fff;
       }
     }
   }
-
 }
 
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-
-  .sign-up {
-
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    font-family: 'Quicksand', sans-serif;
-
-    h1 {
-      font-family: 'Quicksand', sans-serif;
-      color: #7f7f7f;
-    }
-
-    img {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      height: 100vh;
-      z-index: -1;
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%);
-    }
-    .sign-up-container {
-      background: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-      margin-top: 9%;
-      padding: 20px;
-      height: 32rem;
-      border-radius: 10px;
-
-      form {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        width: 80%;
-        margin-bottom: 10px;
-
-        input {
-          margin: 5px;
-          border: 0.7px solid #7f7f7f;
-          height: 2rem;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 0.8rem;
-          background: transparent;
-          border-bottom: 2px solid $gray;
-        }
-
-        button {
-          width: 80%;
-          height: 2rem;
-          border: 0.7px solid #7f7f7f;
-          font-family: 'Quicksand', sans-serif;
-        }
-      }
-
-      hr {
-        border: 0.7px solid #7f7f7f;
-        width: 64%;
-        margin: 0;
-      }
-
-      p {
-        margin: 0;
-        font-size: 0.7rem;
-      }
-
-      div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-
-        button {
-          width: 84%;
-          height: 2rem;
-          margin: 5px;
-          font-family: 'Quicksand', sans-serif;
-
-          i {
-            margin-right: 10px;
-          }
-        }
-      }
-    }
-  }
-
-}
-
-@media only screen and (max-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-
-    
-  .sign-up {
-
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    font-family: 'Quicksand', sans-serif;
-
-    h1 {
-      font-family: 'Quicksand', sans-serif;
-      color: #7f7f7f;
-    }
-
-    img {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      height: 100vh;
-      z-index: -1;
-      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-      filter: grayscale(100%);
-    }
-    .sign-up-container {
-      background: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-      margin-top: 9%;
-      padding: 20px;
-      height: 32rem;
-      border-radius: 10px;
-
-      form {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        width: 100%;
-        margin-bottom: 10px;
-
-        input {
-          margin: 5px;
-          border: 0.7px solid #7f7f7f;
-          height: 2rem;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 0.8rem;
-          background: transparent;
-          border-bottom: 0.7px solid $gray;
-          width: 100%;
-        }
-
-        button {
-          width: 100%;
-          height: 2rem;
-          border: 0.7px solid #7f7f7f;
-          font-family: 'Quicksand', sans-serif;
-        }
-      }
-
-      hr {
-        border: 0.7px solid #7f7f7f;
-        width: 80%;
-        margin: 0;
-      }
-
-      p {
-        margin: 0;
-        font-size: 0.7rem;
-      }
-
-      div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-
-        button {
-          width: 100%;
-          height: 2rem;
-          margin: 5px;
-          font-family: 'Quicksand', sans-serif;
-
-          i {
-            margin-right: 10px;
-          }
-        }
-      }
-    }
-  }
-}
