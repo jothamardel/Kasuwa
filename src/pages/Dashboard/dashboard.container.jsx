@@ -9,13 +9,26 @@ class Dashboard extends React.Component {
     return (
       <div className="dashboard-container">
         <nav>
-          <div></div>
-          <p>Welcome, Bashir Sheidu</p>
+          <div className='mobile'>
+            <div className='line' />
+            <div className='line' />
+            <div className='line' />
+          </div>
+          <p>Kasuwa</p>
+          <ul>
+            <li>Register business</li>
+            <li>My Contributions</li>
+            <li>Profile</li>
+            <li>Logout</li>
+          </ul>
         </nav>
-        <div className="resource">
-          {/* <div>
+        <div className='user'>
+          <h1>Welcome, Bashir Sheidu</h1>
+          <div>
             <button>Fund Wallet</button>
-          </div> */}
+          </div>
+        </div>
+        <div className="resource">
           <div className="wallet">
             <img src={require("../../assets/wallet.svg")} alt="A wallet" />
             <p>Wallet: </p><strong>NGN 1,000.00</strong>
@@ -29,7 +42,7 @@ class Dashboard extends React.Component {
             <p>Contribution pool:</p><strong>NGN 1,000, 000.00</strong>
           </div>
         </div>
-        <img src={require("../../assets/kasuwa1.png")} alt="Naira notes with smartphone" className="image" />
+        {/* <img src={require("../../assets/kasuwa1.png")} alt="Naira notes with smartphone" className="image" /> */}
       </div>
     );
   }
