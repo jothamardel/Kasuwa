@@ -4,13 +4,13 @@
     .description {
       width: 63%;
       padding: 0;
-      background: url('../../assets/background.svg');
+      background: url('../../assets/download.svg');
 
       h1 {
         margin-top: 10rem;
         margin-bottom: 0;
         font-size: 5rem;
-        color: #104B32;
+        color: #575988;
         // color: #fff;
       }
       p {
@@ -24,7 +24,7 @@
       
       button {
         margin-bottom: 10px;
-        background: #104B32;
+        background: #575988;
         color: #ffff;
         border: 0.8px solid #ffff;
         height: 3rem;
@@ -35,8 +35,8 @@
 
         &:hover {
           background: #FFFF;
-        border: 0.8px solid #104B32;
-          color: #104B32;
+          border: 0.8px solid #575988;
+          color: #575988;
         }
       }
     }
@@ -57,13 +57,13 @@
       .description {
         width: 63%;
         padding: 0;
-        background: url('../../assets/background.svg');
+        background: url('../../assets/download.svg');
         margin-top: 15rem;
 
         h1 {
           margin-bottom: 0;
           font-size: 5rem;
-          color: #104B32;
+          color: #575988;
           // color: #fff;
         }
         p {
@@ -77,7 +77,7 @@
         
         button {
           margin-bottom: 10px;
-          background: #104B32;
+          background: #575988;
           color: #ffff;
           border: 0.8px solid #ffff;
           height: 3rem;
@@ -88,8 +88,8 @@
 
           &:hover {
             background: #FFFF;
-          border: 0.8px solid #104B32;
-            color: #104B32;
+            border: 0.8px solid #575988;
+            color: #575988;
           }
         }
       }
@@ -111,13 +111,13 @@
       .description {
         width: 70%;
         padding: 0;
-        background: url('../../assets/background.svg');
+        background: url('../../assets/download.svg');
         margin-top: 26rem;
 
         h1 {
           margin-bottom: 0;
           font-size: 6rem;
-          color: #104B32;
+          color: #575988;
           // color: #fff;
         }
         p {
@@ -131,7 +131,7 @@
         
         button {
           margin-bottom: 10px;
-          background: #104B32;
+          background: #575988;
           color: #ffff;
           border: 0.8px solid #ffff;
           height: 5rem;
@@ -142,8 +142,8 @@
 
           &:hover {
             background: #FFFF;
-          border: 0.8px solid #104B32;
-            color: #104B32;
+          border: 0.8px solid #575988;
+            color: #575988;
           }
         }
       }
@@ -165,7 +165,7 @@
       .description {
         width: 63%;
         padding: 0;
-        background: url('../../assets/background.svg');
+        background: url('../../assets/download.svg');
         margin-top: 26rem;
 
         h1 {
@@ -185,7 +185,7 @@
         
         button {
           margin-bottom: 10px;
-          background: #104B32;
+          background: #575988;
           color: #ffff;
           border: 0.8px solid #ffff;
           height: 3rem;
@@ -196,8 +196,8 @@
 
           &:hover {
             background: #FFFF;
-          border: 0.8px solid #104B32;
-            color: #104B32;
+          border: 0.8px solid #575988;
+            color: #575988;
           }
         }
       }
@@ -224,7 +224,7 @@
 
         h1 {
           font-size: 2rem;
-          color: #104B32;
+          color: #575988;
           margin: 0;
         }
         p {
@@ -236,7 +236,7 @@
 
         button {
           margin-bottom: 10px;
-          background: #104B32;
+          background: #575988;
           color: #ffff;
           border: 0.8px solid #ffff;
           height: 2.5rem;
@@ -258,187 +258,3 @@
   }
 }
 
-
-// @media only screen and (max-width: 467px) {
-//   /* Styles */
-//   .home-page-container {
-
-//     .description {
-//       width: 63%;
-//       padding: 0;
-//       background: url('../../assets/background.svg');
-
-//       h1 {
-//         margin-top: 5rem;
-//         margin-bottom: 0;
-//         font-size: 5rem;
-//         color: #104B32;
-//         // color: #fff;
-//       }
-//       p {
-//           margin: 0;
-//           font-family: 'Quicksand', sans-serif;
-//           margin-bottom: 10px;
-//           font-size: 1.5rem;
-//           // color: #fff;
-
-//         }
-      
-//       button {
-//         margin-bottom: 10px;
-//         background: #104B32;
-//         color: #ffff;
-//         border: 0.8px solid #ffff;
-//         height: 3rem;
-//         width: 10rem;
-//         font-family: 'Quicksand', sans-serif;
-//         font-size: 1rem;
-//         cursor: pointer;
-
-//         &:hover {
-//           background: #FFFF;
-//         border: 0.8px solid #104B32;
-//           color: #104B32;
-//         }
-//       }
-//     }
-
-//   .home-page-img {
-//    position: fixed;
-//    left: 67%;
-//    height: 100vh;
-//    top: -4px;
-//    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-//     filter: grayscale(100%);
-//   }
-// }
-// }
-
-
-// // 320px, 768px, and 1200px
-
-
-// @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-//   /* Styles */
-//     .home-page-container {
-
-//       .description {
-//         margin-top: 60%;
-//         background: white;
-
-//         h1 {
-//           font-size: 4rem;
-//           color: #104B32;
-//           margin: 0;
-//         }
-//         p {
-//           margin: 0;
-//           font-family: 'Quicksand', sans-serif;
-//           margin-bottom: 10px;
-//         }
-
-//         button {
-//           margin-bottom: 10px;
-//           background: #104B32;
-//           color: #ffff;
-//           border: 0.8px solid #ffff;
-//           height: 3rem;
-//           width: 9rem;
-//           font-family: 'Quicksand', sans-serif;
-//         }
-//       }
-
-//       .home-page-img {
-//         position: fixed;
-//         top: 0;
-//         left: 0;
-//         height: 100vh;
-//         z-index: -1;
-//         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-//         filter: grayscale(100%);
-//       }
-//   }
-// }
-
-// @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-//   /* Styles */
-//     .home-page-container {
-
-//       .description {
-//         margin-top: 70%;
-//         background: white;
-
-//         h1 {
-//           font-size: 5rem;
-//           color: #104B32;
-//           margin: 0;
-//         }
-//         p {
-//           margin: 0;
-//           font-family: 'Quicksand', sans-serif;
-//           margin-bottom: 10px;
-//         }
-
-//         button {
-//           margin-bottom: 10px;
-//           background: #104B32;
-//           color: #ffff;
-//           border: 0.8px solid #ffff;
-//           height: 3rem;
-//           width: 9rem;
-//           font-family: 'Quicksand', sans-serif;
-//         }
-//       }
-
-//       .home-page-img {
-//         position: fixed;
-//         top: 0;
-//         left: 0;
-//         height: 100vh;
-//         z-index: -1;
-//         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-//         filter: grayscale(100%);
-//       }
-//     }
-// }
-
-// @media only screen and (max-device-width: 280px) and (max-device-height: 653px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-//   .home-page-container {
-
-//       .description {
-//         margin-top: 80%;
-//         background: white;
-
-//         h1 {
-//           font-size: 4rem;
-//           color: #104B32;
-//           margin: 0;
-//         }
-//         p {
-//           margin: 0;
-//           font-family: 'Quicksand', sans-serif;
-//           margin-bottom: 10px;
-//         }
-
-//         button {
-//           margin-bottom: 10px;
-//           background: #104B32;
-//           color: #ffff;
-//           border: 0.8px solid #ffff;
-//           height: 3rem;
-//           width: 9rem;
-//           font-family: 'Quicksand', sans-serif;
-//         }
-//       }
-
-//       .home-page-img {
-//         position: fixed;
-//         top: 0;
-//         left: 0;
-//         height: 100vh;
-//         z-index: -1;
-//         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-//         filter: grayscale(100%);
-//       }
-//     }
-// }
