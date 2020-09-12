@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { signInWithGoogle, signInWithFacebook } from '../../firebase/firebase.utils';
 import './sign-in.styles.scss';
 
 
@@ -21,8 +22,8 @@ class SigIn extends React.Component {
           <p>or</p>
           <div className="oauth">
             <Link to='/dashboard'>
-              <button><i className="fab fa-facebook-square"></i>Login with Facebook</button>
-              <button><i className="fab fa-google"></i>Login with Google</button>
+              <button onClick={signInWithFacebook}><i className="fab fa-facebook-square"></i>Login with Facebook</button>
+              <button onClick={signInWithGoogle}><i className="fab fa-google"></i>Login with Google</button>
             </Link>
           </div>
         </div>
