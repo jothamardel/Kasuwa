@@ -25,6 +25,7 @@ provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithRedirect(provider);
 
 const facebookProvider = new firebase.auth.FacebookAuthProvider();
+
 export const signInWithFacebook = () => {
   firebase.auth().signInWithRedirect(facebookProvider);
 };
