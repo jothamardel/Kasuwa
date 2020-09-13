@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { auth } from './firebase/firebase.utils';
 import { mountUser, unmountUser } from './redux/user/user.actions';
 import './App.css';
 import HomePage from './pages/Home-page/homepage.component';
-import SigIn from './pages/SignIn-Page/sign-in.container';
+import SignIn from './pages/SignIn-Page/sign-in.container';
 import SignUp from './pages/SignUp-Page/sign-up.component';
 import Dashboard from './pages/Dashboard/dashboard.container';
+import MenuModal from './components/Menu-modal/menu-modal.component';
 
 class App extends React.Component {
 
@@ -16,8 +17,8 @@ class App extends React.Component {
 
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+      if (!user) return;
       this.props.mountUser({ name: user.displayName, email: user.email, mobile: user.phoneNumber });
-      console.log(user)
     })
 
   }
@@ -29,20 +30,28 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        {
+          this.props.modal.modal ? <MenuModal /> : null
+        }
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/signin' component={SigIn} />
+          <Route exact path='/signin' render={() => this.props.user.currentUser ? <Redirect to='/dashboard' /> : <SignIn />} />
           <Route exact path='/signup' component={SignUp} />
-          <Route exact path='/dashboard' component={Dashboard} />
+          <Route exact path='/dashboard' render={() => !this.props.user.currentUser ? <Redirect to='/signin' /> : <Dashboard />} />
         </Switch>
       </div>
     );
   }
 }
 
+const mapStateToProps = (state) => ({
+  modal: state.modal,
+  user: state.user
+});
+
 const mapDispatchToProps = (dispatch) => ({
   mountUser: (user) => dispatch(mountUser(user)),
   unmountUser: () => dispatch(unmountUser())
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
