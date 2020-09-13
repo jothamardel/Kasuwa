@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import './dashboard.styles.scss';
 
 
@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
           </ul>
         </nav>
         <div className='user'>
-          <h1>Welcome, Bashir Sheidu</h1>
+          <h1>{`Welcome, ${this.props.user.currentUser.name}`}</h1>
           <div>
             <button>Fund Wallet</button>
           </div>
@@ -48,4 +48,9 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => ({
+  user: state.user
+});
+
+
+export default connect(mapStateToProps)(Dashboard);
