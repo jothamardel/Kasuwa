@@ -6,7 +6,7 @@ import './register-business.styles.scss';
 class RegisterBusiness extends React.Component {
   render() {
     return (
-      <div>
+      <div className='form-container'>
         <Navigation />
         <form action="">
           <input type="text" />

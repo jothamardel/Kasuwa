@@ -1,0 +1,21 @@
+
+.form-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    border: 0.7px solid black;
+    width: 90%;
+
+    input {
+      margin: 10px;
+    }
+  }
+}
