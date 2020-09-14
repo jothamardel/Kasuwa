@@ -9,12 +9,13 @@ class RegisterBusiness extends React.Component {
       <div className='form-container'>
         <Navigation />
         <form action="">
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
+          <h1>Register Business</h1>
+          <input placeholder='Business Name' type="text" />
+          <input placeholder='Phone No.' type="text" />
+          <input placeholder='' type="text" />
+          <input placeholder='' type="text" />
+          <input placeholder='' type="text" />
+          <input placeholder='' type="text" />
           <button type="submit">Register</button>
         </form>
       </div>

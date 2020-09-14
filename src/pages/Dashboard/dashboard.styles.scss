@@ -76,9 +76,9 @@
     width: 50%;
     height: 8rem;
     border-radius: 10px;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+    background: #fff;
+    box-shadow:  20px 20px 60px #7f7f7f7f, 
+                -20px -20px 60px #7f7f7f7f;
 
     h1 {
       font-family: 'Quicksand', sans-serif;
@@ -107,7 +107,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 1rem;
 
 
     .wallet, .loan, .pool {
@@ -116,14 +116,10 @@
       margin: 10px;
       color: black;
       font-size: 1rem;
-      box-shadow:
-      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-      0 12.5px 10px rgba(0, 0, 0, 0.06),
-      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-      0 100px 80px rgba(0, 0, 0, 0.12);
-      box-shadow: 0 8px 6px -6px black;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow:  -6px 6px 12px #8e8e8e, 
+                  6px -6px 12px #8e8e8e;
       cursor: pointer;
       background: #575988;
       width: 20rem;
@@ -238,9 +234,9 @@
       width: 50%;
       padding-bottom: 2rem;
       border-radius: 10px;
-      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+      background: #fff;
+      box-shadow:  -6px 6px 12px #8e8e8e, 
+                    6px -6px 12px #8e8e8e;
 
       h1 {
         font-family: 'Quicksand', sans-serif;
@@ -277,14 +273,10 @@
         margin: 10px;
         color: black;
         font-size: 1rem;
-        box-shadow:
-        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-        0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 100px 80px rgba(0, 0, 0, 0.12);
-        box-shadow: 0 8px 6px -6px black;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow:  -6px 6px 12px #8e8e8e, 
+                    6px -6px 12px #8e8e8e;
         cursor: pointer;
         background: #575988;
         width: 20rem;
@@ -404,9 +396,9 @@
       width: 50%;
       padding-bottom: 2rem;
       border-radius: 10px;
-      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+      background: #fff;
+      box-shadow:  -6px 6px 12px #8e8e8e, 
+                  6px -6px 12px #8e8e8e;
 
       h1 {
         font-family: 'Quicksand', sans-serif;
@@ -443,14 +435,10 @@
         margin: 10px;
         color: black;
         font-size: 1rem;
-        box-shadow:
-        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-        0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 100px 80px rgba(0, 0, 0, 0.12);
-        box-shadow: 0 8px 6px -6px black;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow:  -6px 6px 12px #8e8e8e, 
+                    6px -6px 12px #8e8e8e;
         cursor: pointer;
         background: #575988;
         width: 20rem;
@@ -558,9 +546,9 @@
       width: 90%;
       padding-bottom: 2rem;
       border-radius: 10px;
-      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
+      background: #fff;
+      box-shadow:  -6px 6px 50px #fff, 
+                  6px -6px 100px #bdbdbd;
 
       h1 {
         font-family: 'Quicksand', sans-serif;
@@ -597,14 +585,10 @@
         margin: 10px;
         color: black;
         font-size: 1rem;
-        box-shadow:
-        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-        0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 100px 80px rgba(0, 0, 0, 0.12);
-        box-shadow: 0 8px 6px -6px black;
+        border-radius: 10px;
+        background: #a4a5ce;
+        box-shadow:  -6px 6px 50px #fff, 
+                    6px -6px 100px #7f7f7f;
         cursor: pointer;
         background: #575988;
         width: 20rem;
@@ -629,7 +613,7 @@
         
         strong {
           background: #ffff;
-          box-shadow: 0 8px 6px -6px black;
+          // box-shadow: 0 8px 6px -6px rgb(250, 250, 250);
           font-family: 'Quicksand', sans-serif;
           font-weight: 500;
         }

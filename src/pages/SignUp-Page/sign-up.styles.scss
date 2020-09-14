@@ -40,9 +40,9 @@ $white: #fff;
     margin-top: 2%;
     border-radius: 10px;
     background: url('../../assets/download.svg') no-repeat center;
-    -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    background: #fff;
+    box-shadow:  20px 20px 60px #7f7f7f7f, 
+                -20px -20px 60px #7f7f7f7f;
 
     form {
       width: 80%;
