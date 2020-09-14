@@ -9,6 +9,7 @@ import SignIn from './pages/SignIn-Page/sign-in.container';
 import SignUp from './pages/SignUp-Page/sign-up.component';
 import Dashboard from './pages/Dashboard/dashboard.container';
 import MenuModal from './components/Menu-modal/menu-modal.component';
+import RegisterBusiness from './pages/Register/register-business.component';
 
 class App extends React.Component {
 
@@ -28,16 +29,18 @@ class App extends React.Component {
   }
 
   render() {
+    const { modal: { modal }, user: { currentUser } } = this.props;
     return (
       <div className="App">
         {
-          this.props.modal.modal ? <MenuModal /> : null
+          modal ? <MenuModal /> : null
         }
         <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/signin' render={() => this.props.user.currentUser ? <Redirect to='/dashboard' /> : <SignIn />} />
+          <Route exact path='/' render={() => currentUser ? <Redirect to='/dashboard' /> : <HomePage />} />
+          <Route exact path='/signin' render={() => currentUser ? <Redirect to='/dashboard' /> : <SignIn />} />
           <Route exact path='/signup' component={SignUp} />
-          <Route exact path='/dashboard' render={() => !this.props.user.currentUser ? <Redirect to='/signin' /> : <Dashboard />} />
+          <Route exact path='/register' component={RegisterBusiness} />
+          <Route exact path='/dashboard' render={() => !currentUser ? <Redirect to='/signin' /> : <Dashboard />} />
         </Switch>
       </div>
     );
