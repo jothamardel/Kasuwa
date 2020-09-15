@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { signInWithGoogle, signInWithFacebook } from '../../firebase/firebase.utils';
 import './sign-up.styles.scss';
 
 
@@ -26,10 +27,8 @@ class SignUp extends React.Component {
           <hr></hr>
           <p>or</p>
           <div className="oauth">
-            <Link to='/dashboard'>
-              <button><i className="fab fa-facebook-square"></i>Login with Facebook</button>
-              <button><i className="fab fa-google"></i>Login with Google</button>
-            </Link>
+            <button onClick={signInWithFacebook}><i className="fab fa-facebook-square"></i>Login with Facebook</button>
+            <button onClick={signInWithGoogle}><i className="fab fa-google"></i>Login with Google</button>
           </div>
         </div>
         <img src={require("../../assets/market_woman1.jpg")} alt="Market woman" />

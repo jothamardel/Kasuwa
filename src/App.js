@@ -38,8 +38,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' render={() => currentUser ? <Redirect to='/dashboard' /> : <HomePage />} />
           <Route exact path='/signin' render={() => currentUser ? <Redirect to='/dashboard' /> : <SignIn />} />
-          <Route exact path='/signup' component={SignUp} />
-          <Route exact path='/register' component={RegisterBusiness} />
+          <Route exact path='/signup' render={() => currentUser ? <Redirect to='/dashboard' /> : <SignUp />} />
+          <Route exact path='/register' render={() => !currentUser ? <Redirect to='/' /> : <RegisterBusiness />} />
           <Route exact path='/dashboard' render={() => !currentUser ? <Redirect to='/signin' /> : <Dashboard />} />
         </Switch>
       </div>
