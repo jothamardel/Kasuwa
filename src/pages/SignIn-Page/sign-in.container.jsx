@@ -12,7 +12,7 @@ class SigIn extends React.Component {
           <h1>Sign In</h1>
           <form action="">
             <input type="text" placeholder="Phone Number" name="mobile" />
-            <input type="password" name="password" id="" />
+            <input type="password" name="password" placeholder="Password" />
             <button type="submit">Login</button>
           </form>
           <Link to='/signup'>
