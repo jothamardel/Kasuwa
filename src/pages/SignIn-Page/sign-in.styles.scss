@@ -16,11 +16,10 @@
     margin-top: 10rem;
     background: url('../../assets/download.svg') no-repeat center;
     width: 40%;
-    // background-color: rgb(68,68,68); /* Needed for IEs */
-    border-radius: 50px;
-    background: #fff;
-    box-shadow:  20px 20px 60px #7f7f7f7f, 
-                -20px -20px 60px #7f7f7f7f;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  8px 8px 16px #d9d9d9, 
+                -8px -8px 16px #ffffff;
 
     form {
       display: flex;
@@ -31,9 +30,13 @@
 
       input {
         margin: 10px;
-        border: 0.7px solid #7f7f7f;
+        border: none;
         height: 2rem;
         width: 98%;
+        border-radius: 0;
+        background: #ffffff;
+        box-shadow:  8px 8px 16px #d9d9d9, 
+                    -8px -8px 16px #ffffff;
       }
 
       button {
@@ -109,10 +112,10 @@
     margin-top: 10rem;
     background: url('../../assets/download.svg') no-repeat center;
     width: 40%;
-    background-color: rgb(68,68,68); /* Needed for IEs */
-    -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  8px 8px 16px #d9d9d9, 
+                -8px -8px 16px #ffffff;
 
     form {
       display: flex;
@@ -123,9 +126,13 @@
 
       input {
         margin: 10px;
-        border: 0.7px solid #7f7f7f;
+        border: none;
         height: 2rem;
         width: 98%;
+        border-radius: 0;
+        background: #ffffff;
+        box-shadow:  8px 8px 16px #d9d9d9, 
+                    -8px -8px 16px #ffffff;
       }
 
       button {
@@ -203,10 +210,10 @@
     margin-top: 5rem;
     background: url('../../assets/download.svg') no-repeat center;
     width: 40%;
-    // background-color: rgb(68,68,68); /* Needed for IEs */
-    -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  8px 8px 16px #d9d9d9, 
+                -8px -8px 16px #ffffff;
 
     form {
       display: flex;
@@ -217,9 +224,13 @@
 
       input {
         margin: 10px;
-        border: 0.7px solid #7f7f7f;
+        border: none;
         height: 2rem;
         width: 98%;
+        border-radius: 0;
+        background: #ffffff;
+        box-shadow:  8px 8px 16px #d9d9d9, 
+                    -8px -8px 16px #ffffff;
       }
 
       button {
@@ -323,6 +334,9 @@
       padding: 20px;
       height: 24rem;
       border-radius: 10px;
+      background: #ffffff;
+      box-shadow:  8px 8px 16px #d9d9d9, 
+                  -8px -8px 16px #ffffff;
 
       form {
         width: 80%;
@@ -330,9 +344,13 @@
 
         input {
           margin: 10px;
-          border: 0.7px solid #7f7f7f;
+          border: none;
           height: 2rem;
           width: 80%;
+          border-radius: 0;
+          background: #ffffff;
+          box-shadow:  8px 8px 16px #d9d9d9, 
+                      -8px -8px 16px #ffffff;
         }
 
         button {

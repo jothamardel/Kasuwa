@@ -12,10 +12,10 @@ class RegisterBusiness extends React.Component {
           <h1>Register Business</h1>
           <input placeholder='Business Name' type="text" />
           <input placeholder='Phone No.' type="text" />
-          <input placeholder='' type="text" />
-          <input placeholder='' type="text" />
-          <input placeholder='' type="text" />
-          <input placeholder='' type="text" />
+          <input placeholder='RC Number' type="text" />
+          <input placeholder='Address' type="text" />
+          <input placeholder='City' type="text" />
+          <input placeholder='State' type="text" />
           <button type="submit">Register</button>
         </form>
       </div>
