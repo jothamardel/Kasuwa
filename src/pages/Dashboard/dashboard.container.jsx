@@ -8,12 +8,12 @@ import Navigation from '../../components/Navigation/navigation.component';
 
 class Dashboard extends React.Component {
   render() {
-    const { name } = this.props.user.currentUser;
+    const { displayName } = this.props.user.currentUser;
     return (
       <div className="dashboard-container">
         <Navigation />
         <div className='user'>
-          <h1>{`Welcome, ${name}`}</h1>
+          <h1>{`Welcome, ${displayName}`}</h1>
           <div>
             <button>Fund Wallet</button>
           </div>

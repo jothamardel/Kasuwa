@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { auth } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { mountUser, unmountUser } from './redux/user/user.actions';
 import './App.css';
 import HomePage from './pages/Home-page/homepage.component';
@@ -17,9 +17,15 @@ class App extends React.Component {
   unsubscribeFromAuth = null
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
       if (!user) return;
-      this.props.mountUser({ name: user.displayName, email: user.email, mobile: user.phoneNumber });
+      const userRef = await createUserProfileDocument(user);
+      userRef.onSnapshot(snapShot => {
+        this.props.mountUser({
+          id: snapShot.id,
+          ...snapShot.data()
+        })
+      })
     })
 
   }
