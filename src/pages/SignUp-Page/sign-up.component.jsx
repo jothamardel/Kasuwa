@@ -5,14 +5,33 @@ import './sign-up.styles.scss';
 
 
 class SignUp extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      displayName: '',
+      phoneNumber: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    }
+  }
+
+  handleSubmit = async event => {
+    event.preventDefault();
+    const { displayName, phoneNumber, email, password, confirmPassword } = this.state;
+    if (password !== confirmPassword) {
+      alert("password don't match")
+    }
+  }
+
   render() {
     return (
       <div className="sign-up">
         <div className="sign-up-container">
           <h1>Sign Up</h1>
           <form action="">
-            <input type="text" name="firstName" placeholder="First Name" />
-            <input type="text" name="lastName" placeholder="Last Name" />
+            <input type="text" name="displayName" placeholder="Full Name" />
+            {/* <input type="text" name="lastName" placeholder="Last Name" /> */}
             <input type="text" placeholder="Phone Number" name="mobile" />
             <input type="email" name="email" placeholder="Email" />
             <input type="password" name="password" placeholder="Password" />
