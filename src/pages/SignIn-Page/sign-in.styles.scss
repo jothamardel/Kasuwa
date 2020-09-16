@@ -63,8 +63,7 @@
   }
 
   hr {
-    border: 0.7px solid #7f7f7f;
-    margin: 0;
+    display: none;
   }
 
   p {
@@ -379,7 +378,6 @@
           border-bottom: 0.5px solid #575988;
           height: 2rem;
           width: 80%;
-          border-radius: 0;
           background: #ffffff;
           -webkit-box-shadow: 8px 8px 16px #d9d9d9, 
                           -8px -8px 16px #ffffff;;
@@ -419,6 +417,7 @@
           background: transparent;
           border: 0.4px solid #575988;
           font-family: 'Quicksand', sans-serif;
+          // font-size: 0.7rem;
 
           i {
             margin-right: 10px;
