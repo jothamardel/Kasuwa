@@ -24,7 +24,7 @@ class App extends React.Component {
         this.props.mountUser({
           id: snapShot.id,
           ...snapShot.data()
-        })
+        });
       })
     })
 

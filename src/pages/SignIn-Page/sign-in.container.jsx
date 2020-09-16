@@ -1,18 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { signInWithGoogle, signInWithFacebook } from '../../firebase/firebase.utils';
+import { auth, signInWithGoogle, signInWithFacebook } from '../../firebase/firebase.utils';
 import './sign-in.styles.scss';
 
 
 class SigIn extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      email: '',
+      password: ''
+    }
+  }
+
+  handleSubmit = async event => {
+    event.preventDefault();
+    const { email, password } = this.state;
+    console.log(email, password)
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  }
   render() {
     return (
       <div className="sign-in">
         <div className="sign-in-container">
           <h1>Sign In</h1>
-          <form action="">
-            <input type="text" placeholder="Phone Number" name="mobile" />
-            <input type="password" name="password" placeholder="Password" />
+          <form onSubmit={this.handleSubmit}>
+            <input type="email" placeholder="Email" name="email" onChange={this.handleChange} />
+            <input type="password" name="password" placeholder="Password" onChange={this.handleChange} />
             <button type="submit">Login</button>
           </form>
           <Link to='/signup'>
@@ -32,5 +56,6 @@ class SigIn extends React.Component {
     );
   }
 }
+
 
 export default SigIn;
