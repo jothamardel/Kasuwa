@@ -16,10 +16,11 @@ const MenuModal = ({ closeModal, unmountUser }) => (
       <Link to='/register' className='link'>
         <li className='item'>Register Business</li>
       </Link>
+      <li className='item'>Schedule</li>
       <li className='item'>Profile</li>
-      <li className='item'>Loan</li>
-      <li className='item'>My Contribution</li>
-      <li className='item'>Fund Wallet</li>
+      {/* <li className='item'>Loan</li> */}
+      {/* <li className='item'>My Contribution</li> */}
+      {/* <li className='item'>Fund Wallet</li> */}
       <li className='item' onClick={() => {
         unmountUser()
         closeModal()
