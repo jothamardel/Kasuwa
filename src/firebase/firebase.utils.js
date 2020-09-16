@@ -37,6 +37,22 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 }
 
+export const createBusinessProfileDocument = async (id, businessProfile) => {
+  if (!businessProfile) return;
+  const businessRef = firestore.collection(`users/${id}/business`);
+  const snapShot = await businessRef.get();
+  if (!snapShot.docs.length) {
+    try {
+      await businessRef.add({
+        ...businessProfile
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  return businessRef;
+}
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
