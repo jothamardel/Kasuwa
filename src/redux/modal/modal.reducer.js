@@ -2,7 +2,8 @@ import ConstantActionTypes from './modal.constants';
 
 
 const INITIAL_STATE = {
-  modal: false
+  modal: false,
+  isLoading: false
 }
 
 const modalReducer = (state = INITIAL_STATE, action = {}) => {
@@ -13,10 +14,17 @@ const modalReducer = (state = INITIAL_STATE, action = {}) => {
         modal: !state.modal
       }
 
+    case ConstantActionTypes.IS_LOADING:
+      return {
+        ...state,
+        isLoading: true
+      }
+
     case ConstantActionTypes.CLOSE_MODAL:
       return {
         ...state,
-        modal: false
+        modal: false,
+        isLoading: false
       }
 
     default:

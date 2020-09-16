@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { auth, signInWithGoogle, signInWithFacebook } from '../../firebase/firebase.utils';
 import './sign-in.styles.scss';
+import { connect } from 'react-redux';
+import { isLoading, closeModal } from '../../redux/modal/modal.actions';
 
 
 class SigIn extends React.Component {
@@ -16,8 +18,6 @@ class SigIn extends React.Component {
   handleSubmit = async event => {
     event.preventDefault();
     const { email, password } = this.state;
-    console.log(email, password)
-
     try {
       await auth.signInWithEmailAndPassword(email, password);
     } catch (error) {
@@ -30,6 +30,9 @@ class SigIn extends React.Component {
     this.setState({ [name]: value });
   }
   render() {
+    if (this.props.modal.isLoading) {
+      setTimeout(() => this.props.closeModal(), 5000);
+    }
     return (
       <div className="sign-in">
         <div className="sign-in-container">
@@ -37,7 +40,7 @@ class SigIn extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <input type="email" placeholder="Email" name="email" onChange={this.handleChange} />
             <input type="password" name="password" placeholder="Password" onChange={this.handleChange} />
-            <button type="submit">Login</button>
+            <button type="submit" onClick={() => this.state.email && this.state.password ? this.props.isLoading() : null}>Login</button>
           </form>
           <Link to='/signup'>
             <p>Don't have an account? Sign Up.</p>
@@ -45,7 +48,7 @@ class SigIn extends React.Component {
           <hr></hr>
           <p>or</p>
           <div className="oauth">
-            <Link to='/dashboard'>
+            <Link to='/dashboard' onClick={this.props.isLoading}>
               <button onClick={signInWithFacebook}><i className="fab fa-facebook-square"></i>Login with Facebook</button>
               <button onClick={signInWithGoogle}><i className="fab fa-google"></i>Login with Google</button>
             </Link>
@@ -57,5 +60,14 @@ class SigIn extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  modal: state.modal
+});
 
-export default SigIn;
+const mapDispatchToProps = (dispatch) => ({
+  isLoading: () => dispatch(isLoading()),
+  closeModal: () => dispatch(closeModal())
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SigIn);

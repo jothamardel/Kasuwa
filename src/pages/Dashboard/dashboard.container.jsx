@@ -2,11 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './dashboard.styles.scss';
 import { wallet } from '../../utlis/utils';
+import { closeModal } from '../../redux/modal/modal.actions';
 import Navigation from '../../components/Navigation/navigation.component';
 
 
 
 class Dashboard extends React.Component {
+
+  componentDidMount() {
+    this.props.closeModal();
+  }
   render() {
     const { displayName } = this.props.user.currentUser;
     return (
@@ -45,6 +50,10 @@ const mapStateToProps = (state) => ({
   user: state.user
 });
 
+const mapDispatchToProps = (dispatch) => ({
+  closeModal: () => dispatch(closeModal())
+});
 
 
-export default connect(mapStateToProps,)(Dashboard);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

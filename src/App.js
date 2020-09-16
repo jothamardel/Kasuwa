@@ -10,6 +10,7 @@ import SignUp from './pages/SignUp-Page/sign-up.component';
 import Dashboard from './pages/Dashboard/dashboard.container';
 import MenuModal from './components/Menu-modal/menu-modal.component';
 import RegisterBusiness from './pages/Register/register-business.component';
+import WithSpinner from './components/With-spinner/with-spinner.component';
 
 class App extends React.Component {
 
@@ -27,7 +28,6 @@ class App extends React.Component {
         });
       })
     })
-
   }
 
   componentWillUnmount() {
@@ -35,11 +35,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { modal: { modal }, user: { currentUser } } = this.props;
+    const { modal: { modal, isLoading }, user: { currentUser } } = this.props;
     return (
       <div className="App">
         {
           modal ? <MenuModal /> : null
+        }
+        {
+          isLoading ? <WithSpinner /> : null
         }
         <Switch>
           <Route exact path='/' render={() => currentUser ? <Redirect to='/dashboard' /> : <HomePage />} />
@@ -60,7 +63,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   mountUser: (user) => dispatch(mountUser(user)),
-  unmountUser: () => dispatch(unmountUser())
+  unmountUser: () => dispatch(unmountUser()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
