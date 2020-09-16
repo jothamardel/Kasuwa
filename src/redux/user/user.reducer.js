@@ -2,7 +2,8 @@ import ConstantActionTypes from './user.constants';
 
 
 const INITIAL_STATE = {
-  currentUser: null
+  currentUser: null,
+  businessDetails: null
 }
 
 const userReducer = (state = INITIAL_STATE, action = {}) => {
@@ -13,10 +14,16 @@ const userReducer = (state = INITIAL_STATE, action = {}) => {
         ...state,
         currentUser: action.payload
       }
+    case ConstantActionTypes.GET_BUSINESS_DETAILS:
+      return {
+        ...state,
+        businessDetails: action.payload
+      }
     case ConstantActionTypes.UNMOUNT_USER:
       return {
         ...state,
-        currentUser: null
+        currentUser: null,
+        businessDetails: null
       }
     default:
       return state;

@@ -5,4 +5,9 @@ export const mountUser = (user) => ({
   payload: user
 });
 
+export const getBusinessDetails = (business) => ({
+  type: ConstantActionTypes.GET_BUSINESS_DETAILS,
+  payload: business
+});
+
 export const unmountUser = () => ({ type: ConstantActionTypes.UNMOUNT_USER });
