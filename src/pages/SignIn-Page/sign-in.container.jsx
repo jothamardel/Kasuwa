@@ -54,7 +54,6 @@ class SigIn extends React.Component {
             </Link>
           </div>
         </div>
-        <img src={require("../../assets/market_woman1.jpg")} alt="Market woman" />
       </div>
     );
   }

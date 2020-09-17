@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
@@ -13,7 +13,9 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <PersistGate persistor={persistor}>
-          <App />
+          <Suspense fallback={<div>loading...</div>}>
+            <App />
+          </Suspense>
         </PersistGate>
       </BrowserRouter>
     </Provider>
