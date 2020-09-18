@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import Flutterwave from 'flutterwave-node-v3';
 import { connect } from 'react-redux';
 import './dashboard.styles.scss';
 import { wallet } from '../../utlis/utils';
@@ -12,6 +13,32 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.closeModal();
+    const flw = new Flutterwave(process.env.REACT_APP_FLW_PUB_KEY, process.env.REACT_APP_FLW_SECRET_KEY);
+    const charge_ng_acct = async () => {
+
+      try {
+
+        const payload = {
+          "tx_ref": `${this.props.user.currentUser.id}`, //This is a unique reference, unique to the particular transaction being carried out. It is generated when it is not provided by the merchant for every transaction.
+          "amount": "100", //This is the amount to be charged.
+          "account_bank": "011", //This is the Bank numeric code. You can get a list of supported banks and their respective codes Here: https://developer.flutterwave.com/v3.0/reference#get-all-banks
+          "account_number": "3039094800",
+          "currency": "NGN",
+          "email": "ardelmbiplang@gmail.com",
+          "phone_number": "07033680280", //This is the phone number linked to the customer's mobile money account
+          "fullname": "Ardel Mbiplang Nathaniel"
+        }
+
+        const response = await flw.Charge.ng(payload)
+        console.log(response);
+      } catch (error) {
+        console.log(error)
+      }
+
+    }
+
+
+    charge_ng_acct();
   }
   render() {
     const { displayName } = this.props.user.currentUser;

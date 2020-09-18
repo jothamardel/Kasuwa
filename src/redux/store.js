@@ -3,9 +3,10 @@ import { persistStore } from 'redux-persist';
 import logger from 'redux-logger'
 import rootReducer from './root-reducer';
 
-const middleWares = [logger];
+const middleWares = [];
 
 if (process.env.NODE_ENV === 'development') {
+  console.log("Development Mode")
   middleWares.push(logger);
 }
 
