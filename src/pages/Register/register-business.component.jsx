@@ -42,6 +42,7 @@ class RegisterBusiness extends React.Component {
   }
   render() {
     const { user: { businessDetails } } = this.props;
+    console.log(businessDetails)
     return (
       <div className='form-container'>
         <Navigation />

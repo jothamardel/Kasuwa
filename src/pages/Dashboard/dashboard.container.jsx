@@ -10,6 +10,13 @@ import Navigation from '../../components/Navigation/navigation.component';
 // const WalletImage = lazy(() => <img src={require("../../assets/wallet.svg")} alt="A wallet" />);
 
 class Dashboard extends React.Component {
+  constructor(props) {
+    super();
+
+    this.state = {
+      fundWallet: null
+    }
+  }
 
   componentDidMount() {
     this.props.closeModal();
