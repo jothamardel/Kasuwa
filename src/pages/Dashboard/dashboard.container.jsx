@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 // import Flutterwave from 'flutterwave-node-v3';
+import axios from 'axios';
+import { sterling } from 'innovation-sandbox';
 import { connect } from 'react-redux';
 import './dashboard.styles.scss';
 import { wallet } from '../../utlis/utils';
@@ -10,7 +12,7 @@ import Navigation from '../../components/Navigation/navigation.component';
 // const WalletImage = lazy(() => <img src={require("../../assets/wallet.svg")} alt="A wallet" />);
 
 class Dashboard extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
 
     this.state = {
@@ -20,6 +22,80 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.closeModal();
+
+    axios({
+      method: 'get',
+      baseURL: 'https://sandboxapi.fsi.ng',
+      url: '/sterling/TransferAPIs/api/Spay/InterbankNameEnquiry?',
+      params: {
+        Referenceid: "01",
+        RequestType: "01",
+        Translocation: "01",
+        ToAccount: "0037514056",
+        destinationbankcode: "000001"
+      },
+      data: {
+        Referenceid: "01",
+        RequestType: "01",
+        Translocation: "01",
+        SessionID: "01",
+        FromAccount: "01",
+        ToAccount: "01",
+        Amount: "01",
+        DestinationBankCode: "01",
+        NEResponse: "01",
+        BenefiName: "01",
+        PaymentReference: "01",
+        OriginatorAccountName: "01",
+        translocation: "01"
+      },
+      headers: {
+        "Sandbox-Key": "86d5fc53bd71bec9cd735cc8f28799f4",
+        "Ocp-Apim-Subscription-Key": "t",
+        "Ocp-Apim-Trace": "true",
+        "Appid": "69",
+        "Content-Type": "application/json",
+        "ipval": 0
+      }
+    })
+      .then((response) => {
+        console.log(response.data.data)
+        this.setState({ fundWallet: response.data.data })
+      })
+      .catch((error) => console.log(error.message))
+
+    // axios({
+    //   method: 'post',
+    //   baseURL: 'https://sandboxapi.fsi.ng',
+    //   url: '/sterling/accountapi/api/Spay/InterbankTransferReq',
+    //   data: {
+    //     Referenceid: "0101",
+    //     RequestType: "01",
+    //     Translocation: "0101",
+    //     SessionID: "01",
+    //     FromAccount: "01",
+    //     ToAccount: "01",
+    //     Amount: "01",
+    //     DestinationBankCode: "000001",
+    //     NEResponse: "01",
+    //     BenefiName: "01",
+    //     PaymentReference: "01",
+    //     OriginatorAccountName: "01",
+    //     translocation: "01"
+    //   },
+    //   headers: {
+    //     "Sandbox-Key": "86d5fc53bd71bec9cd735cc8f28799f4",
+    //     "Ocp-Apim-Subscription-Key": "t",
+    //     "Ocp-Apim-Trace": "true",
+    //     "Appid": "69",
+    //     "Content-Type": "application/json",
+    //     "ipval": 0
+    //   }
+    // })
+    //   .then((response) => console.log(response))
+    //   .catch((error) => console.log(error.message))
+
+
   }
   render() {
     const { displayName } = this.props.user.currentUser;
@@ -30,6 +106,7 @@ class Dashboard extends React.Component {
 
           <div className='user'>
             <h1>{`Welcome, ${displayName}`}</h1>
+            <p>Account Number: {!this.state.fundWallet ? null : this.state.fundWallet.data.AccountNumber}</p>
             <div>
               <button>Fund Wallet</button>
             </div>
@@ -37,7 +114,8 @@ class Dashboard extends React.Component {
           <div className="resource">
             <div className="wallet">
               <img src={require("../../assets/wallet.svg")} alt="A wallet" />
-              <p>Wallet: </p><strong>
+              <p>Wallet: </p>
+              <strong>
                 {
                   `NGN ${wallet.reduce((accumulator, currentValue) => accumulator + currentValue.amount, 0)}`
                 }
