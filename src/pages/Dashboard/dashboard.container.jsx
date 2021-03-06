@@ -1,7 +1,5 @@
 import React, { Suspense } from 'react';
-// import Flutterwave from 'flutterwave-node-v3';
 import axios from 'axios';
-import { sterling } from 'innovation-sandbox';
 import { connect } from 'react-redux';
 import './dashboard.styles.scss';
 import { wallet } from '../../utlis/utils';
@@ -95,8 +93,8 @@ class Dashboard extends React.Component {
     //   .then((response) => console.log(response))
     //   .catch((error) => console.log(error.message))
 
-
   }
+
   render() {
     const { displayName } = this.props.user.currentUser;
     return (
