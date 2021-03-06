@@ -67,6 +67,7 @@ class App extends React.Component {
           <Route exact path='/signup' render={() => currentUser ? <Redirect to='/dashboard' /> : <SignUp />} />
           <Route exact path='/register' render={() => !currentUser ? <Redirect to='/' /> : <RegisterBusiness />} />
           <Route exact path='/dashboard' render={() => !currentUser ? <Redirect to='/signin' /> : <Dashboard />} />
+          {/* <Route exact path='/dashboard' component={Dashboard} /> */}
         </Switch>
         {/* </Suspense> */}
         {/* </ErrorBoundary> */}

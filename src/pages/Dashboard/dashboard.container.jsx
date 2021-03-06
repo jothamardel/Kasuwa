@@ -58,7 +58,7 @@ class Dashboard extends React.Component {
     })
       .then((response) => {
         console.log(response.data.data)
-        this.setState({ fundWallet: response.data.data })
+        this.setState(() => ({ fundWallet: response.data.data }))
       })
       .catch((error) => console.log(error.message))
 
